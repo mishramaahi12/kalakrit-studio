@@ -1,31 +1,32 @@
 /* =========================================
    KALAKRIT — NAVBAR
-========================================= */
+   ========================================= */
 
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
+
   z-index: 1000;
 
   width: 100%;
+
   padding-top: 0;
 
   display: flex;
   justify-content: center;
 
-  /* HOME / HERO STATE */
   background: transparent;
 
   pointer-events: none;
 
   transition:
-    padding-top 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    padding-top 0.3s ease;
 }
 
 /* =========================================
    SCROLLED NAVBAR
-========================================= */
+   ========================================= */
 
 .navbar.is-scrolled {
   padding-top: 18px;
@@ -33,7 +34,7 @@
 
 /* =========================================
    NAVBAR CONTAINER
-========================================= */
+   ========================================= */
 
 .navbar-container {
   width: 100%;
@@ -47,56 +48,63 @@
 
   padding: 0 32px;
 
-  /* HOME / HERO STATE */
   background: transparent;
+
   border: 1px solid transparent;
   border-radius: 0;
-
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
 
   box-shadow: none;
 
   pointer-events: auto;
 
+  /*
+    IMPORTANT:
+    Do not transition backdrop-filter.
+    It causes expensive repainting during scroll.
+  */
   transition:
-    width 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    height 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    padding 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    border-radius 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 0.4s ease,
-    box-shadow 0.4s ease,
-    background 0.4s ease,
-    backdrop-filter 0.4s ease;
+    width 0.3s ease,
+    height 0.3s ease,
+    padding 0.3s ease,
+    border-radius 0.3s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+
+  will-change: width, height, padding, border-radius;
 }
 
 /* =========================================
    SCROLLED — WHITE PILL
-========================================= */
+   ========================================= */
 
 .navbar.is-scrolled .navbar-container {
   width: min(1180px, calc(100% - 48px));
+
   height: 68px;
 
   padding: 0 22px;
 
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.92);
 
   border: 1px solid var(--card-border);
+
   border-radius: 999px;
 
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  /*
+    Keep blur static instead of animating it.
+  */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
   box-shadow:
-    0 16px 40px rgba(10, 15, 30, 0.12),
-    0 4px 12px rgba(10, 15, 30, 0.06),
-    0 1px 2px rgba(10, 15, 30, 0.05);
+    0 14px 34px rgba(10, 15, 30, 0.10),
+    0 3px 10px rgba(10, 15, 30, 0.045);
 }
 
 /* =========================================
    LOGO
-========================================= */
+   ========================================= */
 
 .navbar-logo {
   display: flex;
@@ -112,22 +120,30 @@
   width: auto;
 
   object-fit: contain;
+
   display: block;
+
+  /*
+    Prevent unnecessary image repainting.
+  */
+  transform: translateZ(0);
 }
 
 /* =========================================
    NAVIGATION
-========================================= */
+   ========================================= */
 
 .navbar-nav {
   display: flex;
   align-items: center;
+
   gap: 42px;
 }
 
 .navbar-links {
   display: flex;
   align-items: center;
+
   gap: 32px;
 }
 
@@ -137,6 +153,7 @@
   color: var(--muted);
 
   font-family: "Poppins", sans-serif;
+
   font-size: 10px;
   font-weight: 600;
 
@@ -145,7 +162,7 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  transition: color 0.25s ease;
+  transition: color 0.2s ease;
 }
 
 .navbar-link::after {
@@ -165,7 +182,7 @@
     var(--cyan)
   );
 
-  transition: width 0.25s ease;
+  transition: width 0.2s ease;
 }
 
 .navbar-link:hover {
@@ -183,7 +200,7 @@
 
 /* =========================================
    PROJECT BUTTON
-========================================= */
+   ========================================= */
 
 .navbar-project-btn {
   min-height: 38px;
@@ -193,6 +210,7 @@
   justify-content: center;
 
   gap: 13px;
+
   padding: 0 18px;
 
   color: #ffffff;
@@ -200,9 +218,11 @@
   background: var(--blue);
 
   border: 1px solid var(--blue);
+
   border-radius: 999px;
 
   font-family: "Poppins", sans-serif;
+
   font-size: 9px;
   font-weight: 700;
 
@@ -212,11 +232,11 @@
   text-transform: uppercase;
 
   transition:
-    color 0.25s ease,
-    background 0.25s ease,
-    border-color 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .navbar-arrow {
@@ -225,7 +245,7 @@
   font-size: 14px;
   line-height: 1;
 
-  transition: transform 0.25s ease;
+  transition: transform 0.2s ease;
 }
 
 .navbar-project-btn:hover {
@@ -247,7 +267,7 @@
 
 /* =========================================
    MOBILE MENU BUTTON
-========================================= */
+   ========================================= */
 
 .navbar-menu {
   display: none;
@@ -261,18 +281,20 @@
   justify-content: center;
 
   flex-direction: column;
+
   gap: 6px;
 
   background: var(--bg-soft);
 
   border: 1px solid var(--card-border);
+
   border-radius: 999px;
 
   cursor: pointer;
 
   transition:
-    border-color 0.25s ease,
-    background 0.25s ease;
+    border-color 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .navbar-menu:hover {
@@ -288,8 +310,8 @@
   background: var(--blue-dark);
 
   transition:
-    transform 0.25s ease,
-    opacity 0.25s ease;
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .navbar-menu.active span:first-child {
@@ -302,7 +324,7 @@
 
 /* =========================================
    TABLET
-========================================= */
+   ========================================= */
 
 @media (max-width: 900px) {
   .navbar-container {
@@ -316,11 +338,19 @@
   .navbar-links {
     gap: 22px;
   }
+
+  /*
+    Smaller blur on tablet.
+  */
+  .navbar.is-scrolled .navbar-container {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
 }
 
 /* =========================================
    MOBILE
-========================================= */
+   ========================================= */
 
 @media (max-width: 700px) {
   .navbar.is-scrolled {
@@ -336,32 +366,51 @@
     background: transparent;
 
     border: 1px solid transparent;
+
     border-radius: 0;
 
     box-shadow: none;
 
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+
+    transition:
+      width 0.25s ease,
+      height 0.25s ease,
+      padding 0.25s ease,
+      border-radius 0.25s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      background-color 0.2s ease;
   }
 
-  /* MOBILE SCROLLED PILL */
+  /* =========================================
+     MOBILE SCROLLED PILL
+     ========================================= */
+
   .navbar.is-scrolled .navbar-container {
     width: calc(100% - 32px);
+
     height: 60px;
 
     padding: 0 16px;
 
-    background: rgba(255, 255, 255, 0.88);
+    background: rgba(255, 255, 255, 0.96);
 
     border: 1px solid var(--card-border);
+
     border-radius: 999px;
 
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    /*
+      Reduced mobile blur.
+      This is the main performance improvement.
+    */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 
     box-shadow:
-      0 14px 34px rgba(10, 15, 30, 0.1),
-      0 3px 10px rgba(10, 15, 30, 0.05);
+      0 10px 26px rgba(10, 15, 30, 0.08),
+      0 2px 8px rgba(10, 15, 30, 0.04);
   }
 
   .navbar-logo-img {
@@ -372,17 +421,24 @@
     display: flex;
 
     position: relative;
+
     z-index: 1002;
   }
+
+  /* =========================================
+     MOBILE NAV MENU
+     ========================================= */
 
   .navbar-nav {
     position: fixed;
 
     top: 74px;
+
     left: 16px;
     right: 16px;
 
     width: auto;
+
     height: auto;
 
     max-height: calc(100svh - 110px);
@@ -392,7 +448,9 @@
     padding: 30px 22px 26px;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: stretch;
     justify-content: flex-start;
 
@@ -401,6 +459,7 @@
     background: rgba(255, 255, 255, 0.98);
 
     border: 1px solid var(--card-border);
+
     border-radius: 24px;
 
     box-shadow:
@@ -409,18 +468,26 @@
     transform: translateY(-12px);
 
     opacity: 0;
+
     visibility: hidden;
 
     transition:
-      transform 0.3s ease,
-      opacity 0.25s ease,
-      visibility 0.3s ease;
+      transform 0.25s ease,
+      opacity 0.2s ease,
+      visibility 0.25s ease;
+
+    /*
+      Don't apply expensive blur to the menu.
+    */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   .navbar-nav.active {
     transform: translateY(0);
 
     opacity: 1;
+
     visibility: visible;
   }
 
@@ -432,6 +499,7 @@
     width: 100%;
 
     display: flex;
+
     flex-direction: column;
 
     align-items: stretch;
@@ -449,6 +517,7 @@
     font-family: "Poppins", sans-serif;
 
     font-size: 28px;
+
     font-weight: 600;
 
     letter-spacing: -0.025em;
@@ -481,11 +550,12 @@
 
 /* =========================================
    SMALL PHONES
-========================================= */
+   ========================================= */
 
 @media (max-width: 380px) {
   .navbar-container {
     width: 100%;
+
     padding: 0 15px;
   }
 
@@ -495,5 +565,23 @@
 
   .navbar-logo-img {
     height: 23px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .navbar-container,
+  .navbar-link,
+  .navbar-link::after,
+  .navbar-project-btn,
+  .navbar-arrow,
+  .navbar-menu,
+  .navbar-menu span,
+  .navbar-nav {
+    transition: none !important;
   }
 }
