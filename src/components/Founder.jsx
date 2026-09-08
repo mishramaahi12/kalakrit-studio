@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 import { ArrowUpRight } from "lucide-react";
 
-import founderPhoto from "../assets/founder/founder.jpg";
+import founderPhoto from "../assets/Founder/founder.jpg";
 
 import "./Founder.css";
 
