@@ -1,0 +1,586 @@
+/* =========================================
+   FINAL CTA
+========================================= */
+
+.final-cta-section {
+  position: relative;
+  width: 100%;
+  min-height: 88vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 120px 0 100px;
+
+  overflow: hidden;
+
+  background: var(--bg);
+}
+
+.final-cta-container {
+  position: relative;
+  z-index: 3;
+
+  width: min(1180px, calc(100% - 40px));
+
+  margin: 0 auto;
+}
+
+/* =========================================
+   BACKGROUND GRID
+========================================= */
+
+.final-cta-grid {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(46, 86, 255, 0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(46, 86, 255, 0.045) 1px,
+      transparent 1px
+    );
+
+  background-size: 32px 32px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.9) 75%,
+    transparent
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.9) 75%,
+    transparent
+  );
+}
+
+/* =========================================
+   GLOWS
+========================================= */
+
+.final-cta-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(100px);
+}
+
+.final-cta-glow-one {
+  width: 500px;
+  height: 500px;
+
+  top: -220px;
+  right: -180px;
+
+  background: rgba(46, 86, 255, 0.11);
+}
+
+.final-cta-glow-two {
+  width: 420px;
+  height: 420px;
+
+  bottom: -240px;
+  left: -180px;
+
+  background: rgba(0, 194, 203, 0.09);
+}
+
+/* =========================================
+   META
+========================================= */
+
+.final-cta-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 35px;
+}
+
+.final-cta-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: var(--muted);
+
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.17em;
+}
+
+.final-cta-kicker-line {
+  width: 35px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    var(--blue),
+    var(--cyan)
+  );
+}
+
+.final-cta-number {
+  color: var(--muted-2);
+
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.final-cta-heading {
+  width: 100%;
+}
+
+.final-cta-heading h1 {
+  max-width: 1100px;
+
+  margin: 0;
+
+  color: var(--blue-dark);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(48px, 6.3vw, 78px);
+
+  font-weight: 700;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.06em;
+}
+
+.final-cta-heading h1 span {
+  display: inline-block;
+
+  background: linear-gradient(
+    100deg,
+    var(--blue),
+    var(--cyan),
+    var(--blue-bright),
+    var(--cyan)
+  );
+
+  background-size: 220% auto;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation: finalCTAHeadingGradient 6s linear infinite;
+}
+
+@keyframes finalCTAHeadingGradient {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 220% center;
+  }
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.final-cta-content {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 300px;
+
+  gap: 100px;
+
+  margin-top: 70px;
+
+  padding-top: 32px;
+
+  border-top: 1px solid var(--card-border);
+}
+
+/* =========================================
+   COPY
+========================================= */
+
+.final-cta-copy {
+  max-width: 650px;
+}
+
+.final-cta-lead {
+  margin: 0 0 20px;
+
+  color: var(--text);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 500;
+
+  line-height: 1.7;
+}
+
+.final-cta-copy > p:last-child {
+  max-width: 580px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  line-height: 1.9;
+}
+
+/* =========================================
+   ACTION
+========================================= */
+
+.final-cta-action {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: center;
+}
+
+.final-cta-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  padding: 0;
+
+  color: var(--blue-dark);
+
+  background: transparent;
+
+  border: none;
+  outline: none;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+
+  cursor: pointer;
+}
+
+.final-cta-button-icon {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    var(--blue),
+    var(--cyan)
+  );
+
+  border-radius: 50%;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.final-cta-button:hover {
+  color: var(--blue);
+}
+
+.final-cta-button:hover .final-cta-button-icon {
+  transform: translate(5px, -5px);
+
+  box-shadow:
+    0 12px 28px rgba(46, 86, 255, 0.2);
+}
+
+.final-cta-action-note {
+  margin-top: 16px;
+
+  color: var(--muted-2);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.final-cta-bottom {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 100px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid var(--card-border);
+}
+
+.final-cta-brand {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.final-cta-brand > span {
+  color: var(--blue-dark);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+.final-cta-brand small {
+  color: var(--muted-2);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.13em;
+}
+
+.final-cta-formula {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  color: var(--muted-2);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.final-cta-formula i {
+  color: var(--cyan);
+
+  font-style: normal;
+
+  font-size: 11px;
+}
+
+/* =========================================
+   REVEAL
+========================================= */
+
+.final-cta-reveal {
+  opacity: 0;
+
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.final-cta-reveal.is-visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .final-cta-section {
+    min-height: auto;
+
+    padding: 100px 0 90px;
+  }
+
+  .final-cta-heading h1 {
+    font-size: clamp(44px, 7vw, 66px);
+  }
+
+  .final-cta-content {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    margin-top: 60px;
+  }
+
+  .final-cta-action {
+    justify-content: flex-start;
+  }
+
+  .final-cta-bottom {
+    margin-top: 75px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .final-cta-section {
+    padding: 85px 0 75px;
+  }
+
+  .final-cta-container {
+    width: min(100% - 30px, 1180px);
+  }
+
+  .final-cta-meta {
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .final-cta-kicker {
+    font-size: 8px;
+
+    line-height: 1.5;
+  }
+
+  .final-cta-number {
+    font-size: 7px;
+  }
+
+  .final-cta-heading h1 {
+    font-size: clamp(36px, 9.5vw, 50px);
+
+    line-height: 1;
+  }
+
+  .final-cta-content {
+    margin-top: 50px;
+
+    gap: 40px;
+
+    padding-top: 25px;
+  }
+
+  .final-cta-lead {
+    font-size: 15px;
+  }
+
+  .final-cta-copy > p:last-child {
+    font-size: 12px;
+  }
+
+  .final-cta-button {
+    font-size: 10px;
+  }
+
+  .final-cta-button-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .final-cta-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    margin-top: 60px;
+  }
+
+  .final-cta-formula {
+    flex-wrap: wrap;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+  .final-cta-heading h1 {
+    font-size: 34px;
+  }
+
+  .final-cta-lead {
+    font-size: 14px;
+  }
+
+  .final-cta-copy > p:last-child {
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .final-cta-heading h1 span {
+    animation: none;
+  }
+
+  .final-cta-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

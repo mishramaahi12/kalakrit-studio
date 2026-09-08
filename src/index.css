@@ -1,0 +1,621 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================
+   KALAKRIT STUDIO — GLOBAL STYLES
+   ========================================= */
+
+:root {
+  --bg: #f7f9fc;
+  --bg-soft: #eef1f7;
+
+  --card: #ffffff;
+  --card-border: #e3e7f5;
+
+  --cyan: #00c2cb;
+  --cyan-dim: #bfe8ea;
+
+  --blue: #2e56ff;
+  --blue-dark: #0a0f1e;
+  --blue-bright: #5c7cff;
+  --blue-soft: #eef1ff;
+
+  --text: #10162b;
+  --muted: #545c72;
+  --muted-2: #9096ad;
+}
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+
+  overflow-x: hidden;
+
+  background-color: #f7f9fc;
+
+  background-image:
+    linear-gradient(
+      rgba(10, 15, 30, 0.085) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(10, 15, 30, 0.085) 1px,
+      transparent 1px
+    );
+
+  background-size: 48px 48px;
+  background-position: center top;
+}
+
+/* =========================================
+   ROOT
+   ========================================= */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  --mouse-x: 50vw;
+  --mouse-y: 30vh;
+}
+
+/* =========================================
+   CURSOR FOLLOWING GRADIENT
+   ========================================= */
+
+.app::after {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  background:
+    radial-gradient(
+      420px circle at var(--mouse-x) var(--mouse-y),
+      rgba(46, 86, 255, 0.16) 0%,
+      rgba(0, 194, 203, 0.08) 30%,
+      rgba(46, 86, 255, 0.025) 55%,
+      transparent 75%
+    );
+
+  opacity: 1;
+
+  transition: opacity 0.25s ease;
+}
+
+/* Keep all actual website content above cursor glow */
+
+.app > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   SECTION SCROLL OFFSET
+   ========================================= */
+
+main > section {
+  scroll-margin-top: 80px;
+}
+
+section {
+  position: relative;
+}
+
+/* =========================================
+   GLOBAL ATMOSPHERE
+   ========================================= */
+
+body::after {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      circle at 12% 10%,
+      rgba(46, 86, 255, 0.075),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 88% 75%,
+      rgba(0, 194, 203, 0.065),
+      transparent 28%
+    );
+
+  animation:
+    globalGlowMove 16s ease-in-out infinite alternate;
+}
+
+@keyframes globalGlowMove {
+  0% {
+    transform: translate3d(-1%, -1%, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(1%, 0.5%, 0) scale(1.015);
+  }
+
+  100% {
+    transform: translate3d(0%, 1%, 0) scale(1);
+  }
+}
+
+/* =========================================
+   SUBTLE GRAIN / NOISE
+   ========================================= */
+
+body::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  pointer-events: none;
+
+  opacity: 0.018;
+
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+/* =========================================
+   GLOBAL TYPOGRAPHY
+   ========================================= */
+
+html,
+body,
+button,
+input,
+textarea,
+select {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button,
+input,
+textarea,
+select {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text);
+}
+
+p {
+  color: var(--muted);
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: rgba(0, 194, 203, 0.35);
+  color: var(--blue-dark);
+}
+
+/* =========================================
+   SECTION LABEL
+   ========================================= */
+
+.section-label {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+
+  text-transform: uppercase;
+
+  color: var(--cyan);
+}
+
+/* =========================================
+   SECTION TITLE
+   ========================================= */
+
+.section-title {
+  font-family: "Poppins", sans-serif;
+
+  color: var(--blue-dark);
+
+  font-weight: 700;
+
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
+/* =========================================
+   COMMON GRADIENT TEXT
+   ========================================= */
+
+.gradient-text {
+  display: inline-block;
+
+  background-image:
+    linear-gradient(
+      100deg,
+      var(--blue),
+      var(--cyan),
+      var(--blue-bright),
+      var(--cyan),
+      var(--blue)
+    );
+
+  background-size: 280% auto;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  animation:
+    globalGradientMove 6s ease-in-out infinite;
+}
+
+/* =========================================
+   COMMON GLOW WRAPPER
+   ========================================= */
+
+.glow-wrap {
+  position: relative;
+
+  isolation: isolate;
+
+  overflow: hidden;
+}
+
+.glow-wrap::before {
+  content: "";
+
+  position: absolute;
+
+  width: 900px;
+  height: 900px;
+
+  top: -350px;
+  left: -280px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(56, 140, 240, 0.20) 0%,
+      rgba(56, 140, 240, 0.075) 42%,
+      transparent 75%
+    );
+
+  filter: blur(80px);
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+.glow-wrap::after {
+  content: "";
+
+  position: absolute;
+
+  width: 850px;
+  height: 850px;
+
+  right: -300px;
+  bottom: -350px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(20, 175, 210, 0.18) 0%,
+      rgba(20, 175, 210, 0.065) 45%,
+      transparent 78%
+    );
+
+  filter: blur(85px);
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+/* =========================================
+   COMMON BUTTONS
+   ========================================= */
+
+.btn-primary {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+
+  padding: 0 20px;
+
+  background: var(--cyan);
+
+  color: var(--blue-dark);
+
+  border: 1px solid var(--cyan);
+
+  border-radius: 4px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: #38d6ec;
+
+  border-color: #38d6ec;
+
+  box-shadow:
+    0 0 28px rgba(56, 214, 236, 0.14);
+
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+
+  padding: 0 20px;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  color: var(--blue-dark);
+
+  border: 1px solid rgba(10, 15, 30, 0.12);
+
+  border-radius: 4px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.btn-ghost:hover {
+  color: var(--blue);
+
+  border-color: rgba(46, 86, 255, 0.28);
+
+  background: rgba(255, 255, 255, 0.72);
+
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   FOCUS STATES
+   ========================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+  body {
+    background-size: 42px 42px;
+  }
+
+  .app::after {
+    background:
+      radial-gradient(
+        330px circle at var(--mouse-x) var(--mouse-y),
+        rgba(46, 86, 255, 0.11) 0%,
+        rgba(0, 194, 203, 0.05) 32%,
+        transparent 75%
+      );
+  }
+
+  .glow-wrap::before {
+    width: 500px;
+    height: 500px;
+
+    top: -220px;
+    left: -220px;
+
+    filter: blur(60px);
+  }
+
+  .glow-wrap::after {
+    width: 500px;
+    height: 500px;
+
+    right: -220px;
+    bottom: -220px;
+
+    filter: blur(60px);
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+  body {
+    background-size: 34px 34px;
+    background-position: center top;
+  }
+
+  .app::after {
+    display: none;
+  }
+
+  body::after {
+    background:
+      radial-gradient(
+        circle at 5% 8%,
+        rgba(46, 86, 255, 0.06),
+        transparent 30%
+      ),
+      radial-gradient(
+        circle at 95% 80%,
+        rgba(0, 194, 203, 0.05),
+        transparent 30%
+      );
+  }
+
+  body::before {
+    opacity: 0.022;
+  }
+
+  .glow-wrap::before {
+    width: 350px;
+    height: 350px;
+
+    top: -180px;
+    left: -180px;
+
+    filter: blur(45px);
+  }
+
+  .glow-wrap::after {
+    width: 350px;
+    height: 350px;
+
+    right: -180px;
+    bottom: -180px;
+
+    filter: blur(45px);
+  }
+
+  .section-label {
+    font-size: 9px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 380px) {
+  body {
+    background-size: 30px 30px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .app::after {
+    display: none;
+  }
+}

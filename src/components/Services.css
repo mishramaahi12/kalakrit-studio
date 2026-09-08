@@ -1,0 +1,1112 @@
+/* =========================================================
+   KALAKRIT STUDIO — SERVICES
+   Editorial / Structured / Clean
+   ========================================================= */
+
+.services-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 145px 0 120px;
+  background: var(--bg);
+  color: var(--text);
+  overflow: hidden;
+}
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.services-container {
+  position: relative;
+  z-index: 3;
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   BACKGROUND GLOWS
+   ========================================================= */
+
+.services-glow {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(110px);
+}
+
+.services-glow-one {
+  width: 620px;
+  height: 620px;
+  top: -300px;
+  right: -230px;
+  background: rgba(0, 194, 203, 0.085);
+}
+
+.services-glow-two {
+  width: 520px;
+  height: 520px;
+  bottom: 12%;
+  left: -310px;
+  background: rgba(46, 86, 255, 0.055);
+}
+
+/* =========================================================
+   SUBTLE GRID
+   ========================================================= */
+
+.services-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(
+      rgba(46, 86, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(46, 86, 255, 0.025) 1px,
+      transparent 1px
+    );
+  background-size: 80px 80px;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.services-header {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 70px;
+  padding-bottom: 85px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.services-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 14px;
+  color: var(--cyan);
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.services-kicker-line {
+  width: 34px;
+  height: 1px;
+  background: var(--cyan);
+}
+
+.services-header-content {
+  min-width: 0;
+}
+
+.services-header-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 22px;
+  color: var(--muted-2);
+  font-family: "Poppins", sans-serif;
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.services-header h1 {
+  margin: 0;
+  color: var(--blue-dark);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(48px, 6vw, 76px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+/* =========================================================
+   IMPORTANT:
+   ONLY SECOND LINE GETS THE COLOUR EFFECT
+   ========================================================= */
+
+.services-header h1 span {
+  background: linear-gradient(
+    100deg,
+    var(--blue),
+    var(--cyan),
+    var(--blue-bright),
+    var(--cyan)
+  );
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: servicesHeadingGradient 6s linear infinite;
+}
+
+@keyframes servicesHeadingGradient {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 220% center;
+  }
+}
+
+.services-header p {
+  max-width: 650px;
+  margin: 35px 0 0;
+  color: var(--muted);
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   SERVICES LIST
+   ========================================================= */
+
+.services-list {
+  padding-top: 30px;
+}
+
+.services-list-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0 0 16px;
+  color: var(--muted-2);
+  font-family: "Poppins", sans-serif;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.service-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px 1fr 50px;
+  gap: 40px;
+  align-items: start;
+  padding: 52px 0;
+  border-bottom: 1px solid var(--card-border);
+  transition:
+    padding 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.4s ease;
+}
+
+.service-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 1px;
+  background: var(--cyan);
+  transition:
+    width 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-item:hover {
+  padding-left: 14px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.service-item:hover::before {
+  width: 100%;
+}
+
+/* =========================================================
+   SERVICE NUMBER
+   ========================================================= */
+
+.service-number {
+  padding-top: 7px;
+  color: var(--cyan);
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+/* =========================================================
+   SERVICE MAIN
+   ========================================================= */
+
+.service-main {
+  min-width: 0;
+}
+
+.service-title-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.service-main h2 {
+  margin: 0 0 20px;
+  color: var(--blue-dark);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(25px, 3vw, 40px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  transition:
+    color 0.3s ease,
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-title-dot {
+  width: 7px;
+  height: 7px;
+  margin-top: -18px;
+  border-radius: 50%;
+  background: var(--cyan);
+  opacity: 0;
+  transform: scale(0.4);
+  transition:
+    opacity 0.3s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-item:hover .service-main h2 {
+  color: var(--blue);
+  transform: translateX(5px);
+}
+
+.service-item:hover .service-title-dot {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.service-description {
+  max-width: 700px;
+  margin: 0 0 21px;
+  color: var(--muted);
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   TAGS
+   ========================================================= */
+
+.service-tags {
+  max-width: 720px;
+  margin: 0;
+  color: var(--blue);
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1.9;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   SERVICE ARROW
+   ========================================================= */
+
+.service-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-top: 2px;
+  border: 1px solid var(--card-border);
+  color: var(--blue);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-item:hover .service-arrow {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #ffffff;
+  transform: rotate(8deg) translateY(-2px);
+}
+
+/* =========================================================
+   APPROACH SECTION
+   ========================================================= */
+
+.approach-section {
+  position: relative;
+  width: 100%;
+  margin-top: 155px;
+  padding: 85px 75px 70px;
+  background:
+    linear-gradient(
+      120deg,
+      #ffffff 0%,
+      #f1f7fa 55%,
+      #edf3ff 100%
+    );
+  border: 1px solid #dbe4ed;
+  overflow: hidden;
+}
+
+.approach-section::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: -280px;
+  right: -170px;
+  border-radius: 50%;
+  background: rgba(0, 194, 203, 0.11);
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.approach-section::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  bottom: -260px;
+  left: -190px;
+  border-radius: 50%;
+  background: rgba(46, 86, 255, 0.07);
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.approach-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 105px;
+  height: 3px;
+  background:
+    linear-gradient(
+      90deg,
+      var(--cyan),
+      var(--blue)
+    );
+}
+
+/* =========================================================
+   APPROACH TOP
+   ========================================================= */
+
+.approach-top {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 45px;
+  padding-bottom: 65px;
+  border-bottom: 1px solid rgba(11, 42, 74, 0.13);
+}
+
+.approach-number {
+  padding-top: 8px;
+  color: var(--cyan);
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.approach-heading {
+  max-width: 900px;
+}
+
+.approach-kicker {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--blue);
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.approach-heading h2 {
+  margin: 0;
+  color: var(--blue-dark);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(44px, 5.2vw, 70px);
+  font-weight: 700;
+  line-height: 0.94;
+  letter-spacing: -0.06em;
+}
+
+.approach-heading h2 span {
+  color: var(--cyan);
+}
+
+.approach-heading > p {
+  max-width: 590px;
+  margin: 30px 0 0;
+  color: var(--muted);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   APPROACH WORKFLOW
+   ========================================================= */
+
+.approach-workflow {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 35px;
+  padding: 60px 0 50px;
+}
+
+/* =========================================================
+   PROGRESS RAIL
+   ========================================================= */
+
+.approach-progress {
+  position: relative;
+  width: 2px;
+  min-height: 405px;
+  background: rgba(11, 42, 74, 0.12);
+}
+
+.approach-progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  background:
+    linear-gradient(
+      to bottom,
+      var(--cyan),
+      var(--blue)
+    );
+  transition:
+    height 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =========================================================
+   APPROACH STEPS
+   ========================================================= */
+
+.approach-steps {
+  border-top: 1px solid rgba(11, 42, 74, 0.13);
+}
+
+.approach-step {
+  border-bottom: 1px solid rgba(11, 42, 74, 0.13);
+}
+
+.approach-step-button {
+  display: grid;
+  grid-template-columns: 65px 1fr 42px;
+  align-items: center;
+  width: 100%;
+  min-height: 82px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+
+.approach-step-number {
+  color: #8b99aa;
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  transition: color 0.3s ease;
+}
+
+.approach-step-title {
+  color: var(--blue-dark);
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.3s ease;
+}
+
+.approach-step-button:hover .approach-step-title {
+  transform: translateX(9px);
+  color: var(--blue);
+}
+
+/* =========================================================
+   APPROACH SYMBOL
+   ========================================================= */
+
+.approach-step-symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(11, 42, 74, 0.18);
+  color: var(--blue);
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.35s ease;
+}
+
+.approach-step-button:hover .approach-step-symbol {
+  border-color: var(--cyan);
+}
+
+.approach-step.is-active .approach-step-number {
+  color: var(--cyan);
+}
+
+.approach-step.is-active .approach-step-title {
+  color: var(--blue);
+}
+
+.approach-step.is-active .approach-step-symbol {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #ffffff;
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   STEP CONTENT
+   ========================================================= */
+
+.approach-step-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.35s ease;
+}
+
+.approach-step-content p {
+  min-height: 0;
+  overflow: hidden;
+  max-width: 620px;
+  margin: 0 65px;
+  padding: 0;
+  color: var(--muted);
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+.approach-step-status {
+  min-height: 0;
+  overflow: hidden;
+  margin-left: 65px;
+  color: #8998a8;
+  font-family: "Poppins", sans-serif;
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.approach-step.is-active .approach-step-content {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.approach-step.is-active .approach-step-content p {
+  padding-bottom: 13px;
+}
+
+.approach-step.is-active
+  .approach-step-content
+  .approach-step-status {
+  padding-bottom: 23px;
+}
+
+/* =========================================================
+   APPROACH BOTTOM
+   ========================================================= */
+
+.approach-bottom {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  padding-top: 5px;
+  color: #8494a6;
+  font-family: "Poppins", sans-serif;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.approach-bottom svg {
+  color: var(--cyan);
+}
+
+/* =========================================================
+   BOTTOM STATEMENT
+   ========================================================= */
+
+.services-statement {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 95px;
+  padding-top: 15px;
+}
+
+.statement-line {
+  flex: 1;
+  height: 1px;
+  background: var(--card-border);
+}
+
+.statement-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.statement-content span {
+  color: var(--blue-dark);
+}
+
+.statement-content b {
+  color: var(--cyan);
+  font-weight: 400;
+}
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+.service-reveal {
+  opacity: 0;
+  transform: translateY(38px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-delay-1 {
+  transition-delay: 0.08s;
+}
+
+.service-delay-2 {
+  transition-delay: 0.16s;
+}
+
+.service-delay-3 {
+  transition-delay: 0.24s;
+}
+
+.service-delay-4 {
+  transition-delay: 0.32s;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .services-page {
+    padding: 110px 0 90px;
+  }
+
+  .services-container {
+    width: min(100% - 32px, 1180px);
+  }
+
+  .services-header {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-bottom: 60px;
+  }
+
+  .services-kicker {
+    padding-top: 0;
+  }
+
+  .services-header h1 {
+    font-size: clamp(44px, 7vw, 64px);
+  }
+
+  .services-header p {
+    margin-top: 28px;
+  }
+
+  .service-item {
+    grid-template-columns: 65px 1fr 40px;
+    gap: 25px;
+    padding: 45px 0;
+  }
+
+  .service-main h2 {
+    font-size: 30px;
+  }
+
+  .service-description {
+    font-size: 12px;
+  }
+
+  .approach-section {
+    margin-top: 120px;
+    padding: 70px 45px 60px;
+  }
+
+  .approach-top {
+    grid-template-columns: 65px 1fr;
+    gap: 30px;
+    padding-bottom: 55px;
+  }
+
+  .approach-heading h2 {
+    font-size: clamp(38px, 6vw, 58px);
+  }
+
+  .approach-workflow {
+    gap: 25px;
+    padding: 55px 0;
+  }
+
+  .approach-step-button {
+    grid-template-columns: 55px 1fr 38px;
+  }
+
+  .approach-step-content p {
+    margin-left: 55px;
+  }
+
+  .approach-step-status {
+    margin-left: 55px;
+  }
+
+  .services-statement {
+    margin-top: 80px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .services-page {
+    padding: 85px 0 70px;
+  }
+
+  .services-container {
+    width: calc(100% - 28px);
+  }
+
+  .services-header {
+    gap: 25px;
+    padding-bottom: 42px;
+  }
+
+  .services-kicker {
+    font-size: 8px;
+  }
+
+  .services-kicker-line {
+    width: 25px;
+  }
+
+  .services-header-meta {
+    font-size: 6px;
+    margin-bottom: 17px;
+  }
+
+  .services-header h1 {
+    font-size: clamp(36px, 9.5vw, 50px);
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+  }
+
+  .services-header p {
+    margin-top: 24px;
+    font-size: 11px;
+    line-height: 1.85;
+  }
+
+  .services-list {
+    padding-top: 24px;
+  }
+
+  .services-list-heading {
+    font-size: 6px;
+  }
+
+  .service-item {
+    grid-template-columns: 35px 1fr;
+    gap: 15px;
+    padding: 35px 0;
+  }
+
+  .service-number {
+    padding-top: 4px;
+    font-size: 8px;
+  }
+
+  .service-main h2 {
+    margin-bottom: 15px;
+    font-size: 23px;
+  }
+
+  .service-title-dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .service-description {
+    margin-bottom: 16px;
+    font-size: 10.5px;
+    line-height: 1.85;
+  }
+
+  .service-tags {
+    font-size: 7px;
+    line-height: 1.9;
+  }
+
+  .service-arrow {
+    display: none;
+  }
+
+  .service-item:hover {
+    padding-left: 7px;
+  }
+
+  /* =====================================================
+     APPROACH MOBILE
+     ===================================================== */
+
+  .approach-section {
+    margin-top: 95px;
+    padding: 55px 22px 45px;
+  }
+
+  .approach-accent {
+    width: 70px;
+  }
+
+  .approach-top {
+    grid-template-columns: 30px 1fr;
+    gap: 14px;
+    padding-bottom: 42px;
+  }
+
+  .approach-number {
+    padding-top: 4px;
+    font-size: 7px;
+  }
+
+  .approach-kicker {
+    margin-bottom: 14px;
+    font-size: 6.5px;
+  }
+
+  .approach-heading h2 {
+    font-size: clamp(31px, 9vw, 45px);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+  }
+
+  .approach-heading > p {
+    margin-top: 22px;
+    font-size: 9.5px;
+    line-height: 1.85;
+  }
+
+  .approach-workflow {
+    grid-template-columns: 7px 1fr;
+    gap: 18px;
+    padding: 42px 0 38px;
+  }
+
+  .approach-progress {
+    min-height: 330px;
+  }
+
+  .approach-step-button {
+    grid-template-columns: 30px 1fr 28px;
+    min-height: 62px;
+  }
+
+  .approach-step-number {
+    font-size: 6px;
+  }
+
+  .approach-step-title {
+    font-size: 16px;
+  }
+
+  .approach-step-symbol {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+
+  .approach-step-content p {
+    margin: 0 30px;
+    font-size: 8.8px;
+    line-height: 1.85;
+  }
+
+  .approach-step-status {
+    margin-left: 30px;
+    font-size: 5.5px;
+  }
+
+  .approach-step.is-active
+    .approach-step-content
+    p {
+    padding-bottom: 10px;
+  }
+
+  .approach-step.is-active
+    .approach-step-content
+    .approach-step-status {
+    padding-bottom: 17px;
+  }
+
+  .approach-bottom {
+    gap: 8px;
+    font-size: 5.5px;
+    letter-spacing: 0.12em;
+  }
+
+  .approach-bottom svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* =====================================================
+     BOTTOM STATEMENT MOBILE
+     ===================================================== */
+
+  .services-statement {
+    margin-top: 60px;
+    padding-top: 10px;
+  }
+
+  .statement-content {
+    gap: 8px;
+    font-size: 9px;
+    letter-spacing: 0.04em;
+  }
+
+  .statement-line {
+    display: none;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .services-container {
+    width: calc(100% - 24px);
+  }
+
+  .services-header h1 {
+    font-size: 34px;
+  }
+
+  .service-main h2 {
+    font-size: 21px;
+  }
+
+  .approach-section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .approach-heading h2 {
+    font-size: 29px;
+  }
+
+  .approach-step-title {
+    font-size: 15px;
+  }
+
+  .approach-step-content p {
+    margin: 0 28px;
+    font-size: 8.5px;
+  }
+
+  .approach-step-status {
+    margin-left: 28px;
+  }
+
+  .statement-content {
+    font-size: 8px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .service-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .services-header h1 span {
+    animation: none;
+  }
+
+  .service-item,
+  .service-item::before,
+  .service-main h2,
+  .service-title-dot,
+  .service-arrow,
+  .approach-progress-fill,
+  .approach-step-title,
+  .approach-step-symbol,
+  .approach-step-content {
+    transition: none;
+  }
+}

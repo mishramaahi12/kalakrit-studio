@@ -1,0 +1,1621 @@
+/* =========================================================
+   WHY US — KALAKRIT STUDIO
+   ========================================================= */
+
+.whyus-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #ffffff;
+  color: var(--text);
+}
+
+.whyus-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding: 95px 0 70px;
+}
+
+
+/* =========================================================
+   GLOW
+   ========================================================= */
+
+.whyus-glow {
+  position: absolute;
+
+  pointer-events: none;
+
+  border-radius: 50%;
+
+  filter: blur(95px);
+}
+
+.whyus-glow-one {
+  width: 650px;
+  height: 650px;
+
+  top: -280px;
+  right: -220px;
+
+  background: rgba(18, 63, 109, 0.08);
+}
+
+.whyus-glow-two {
+  width: 520px;
+  height: 520px;
+
+  bottom: 10%;
+  left: -300px;
+
+  background: rgba(11, 42, 74, 0.055);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.whyus-hero {
+  padding-bottom: 78px;
+
+  border-bottom:
+    1px solid var(--card-border);
+}
+
+.whyus-topline {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 34px;
+}
+
+.whyus-label,
+.whyus-index {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+.whyus-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: var(--blue);
+}
+
+.whyus-label::before {
+  content: "";
+
+  width: 34px;
+  height: 2px;
+
+  background: var(--blue);
+}
+
+.whyus-index {
+  color: var(--muted-2);
+}
+
+
+/* =========================================================
+   HERO HEADING
+   ========================================================= */
+
+.whyus-hero h1 {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0;
+
+  color: var(--blue-dark);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(48px, 6vw, 76px);
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -0.055em;
+
+  text-align: left;
+}
+
+.whyus-hero h1 span {
+  display: inline-block;
+
+  background:
+    linear-gradient(
+      100deg,
+      var(--blue),
+      var(--cyan),
+      var(--blue-bright),
+      var(--cyan)
+    );
+
+  background-size: 220% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation:
+    whyusHeadingGradient
+    6s linear infinite;
+}
+
+@keyframes whyusHeadingGradient {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 220% center;
+  }
+}
+
+
+/* =========================================================
+   HERO BOTTOM
+   ========================================================= */
+
+.whyus-hero-bottom {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 42px;
+}
+
+.whyus-hero-bottom p {
+  max-width: 410px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.8;
+}
+
+.whyus-hero-arrow {
+  flex-shrink: 0;
+
+  color: var(--blue);
+}
+
+
+/* =========================================================
+   COMMON
+   ========================================================= */
+
+.whyus-section-number {
+  color: var(--blue);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+.whyus-section-label {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: var(--blue);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+}
+
+
+/* =========================================================
+   REPETITION
+   ========================================================= */
+
+.whyus-repetition {
+  display: grid;
+
+  grid-template-columns: 90px 1fr;
+
+  gap: 50px;
+
+  padding: 100px 0;
+}
+
+.whyus-repetition-content {
+  max-width: 880px;
+}
+
+.whyus-intro {
+  max-width: 600px;
+
+  margin: 0 0 45px;
+
+  color: var(--text);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   REPETITION LIST
+   ========================================================= */
+
+.whyus-list {
+  border-top:
+    1px solid var(--card-border);
+}
+
+.whyus-list-item {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    50px 82px 1fr auto;
+
+  align-items: center;
+
+  gap: 18px;
+
+  min-height: 92px;
+
+  padding: 0;
+
+  border: none;
+
+  border-bottom:
+    1px solid var(--card-border);
+
+  background: transparent;
+
+  color: inherit;
+
+  font-family: "Poppins", sans-serif;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  transition:
+    background 0.45s ease,
+    padding-left 0.5s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+}
+
+.whyus-list-item:hover {
+  padding-left: 12px;
+
+  background: var(--blue-soft);
+}
+
+.whyus-list-item:focus-visible {
+  outline:
+    2px solid var(--cyan);
+
+  outline-offset: -2px;
+}
+
+.whyus-list-number {
+  color: var(--muted-2);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.whyus-list-image {
+  width: 82px;
+  height: 58px;
+
+  overflow: hidden;
+
+  background: var(--bg-soft);
+
+  border:
+    1px solid var(--card-border);
+}
+
+.whyus-list-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.6s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+    filter 0.4s ease;
+}
+
+.whyus-list-item:hover
+  .whyus-list-image img {
+  transform: scale(1.08);
+}
+
+.whyus-list-item strong {
+  color: var(--blue-dark);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  letter-spacing: -0.02em;
+}
+
+.whyus-list-item svg {
+  color: var(--blue);
+
+  transition:
+    transform 0.45s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+}
+
+.whyus-list-item:hover svg {
+  transform:
+    translate(5px, -5px);
+}
+
+.whyus-question {
+  margin: 34px 0 0;
+
+  color: var(--blue);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   PROJECT IMAGE MODAL
+   ========================================================= */
+
+.whyus-project-modal {
+  position: fixed !important;
+
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+
+  width: 100vw !important;
+  height: 100vh !important;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 35px;
+
+  background:
+    rgba(5, 9, 20, 0.96);
+
+  z-index: 2147483647 !important;
+
+  isolation: isolate;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  animation:
+    whyusModalFadeIn
+    0.3s ease forwards;
+}
+
+
+/* =========================================================
+   MODAL INNER
+   ========================================================= */
+
+.whyus-project-modal-inner {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(
+      1100px,
+      calc(100vw - 70px)
+    );
+
+  max-height:
+    calc(100vh - 70px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+   ========================================================= */
+
+.whyus-project-close {
+  position: fixed !important;
+
+  top: 20px !important;
+  right: 24px !important;
+
+  z-index: 2147483647 !important;
+
+  width: 54px !important;
+  height: 54px !important;
+
+  min-width: 54px !important;
+  min-height: 54px !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.65) !important;
+
+  border-radius: 50% !important;
+
+  background:
+    #080d1b !important;
+
+  color: #ffffff !important;
+
+  cursor: pointer;
+
+  opacity: 1 !important;
+
+  visibility: visible !important;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  box-shadow:
+    0 15px 45px
+      rgba(0, 0, 0, 0.6),
+    0 0 0 1px
+      rgba(255, 255, 255, 0.08);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.whyus-project-close:hover {
+  background:
+    var(--blue) !important;
+
+  border-color:
+    var(--blue) !important;
+
+  transform:
+    rotate(90deg)
+    scale(1.08);
+
+  box-shadow:
+    0 15px 45px
+      rgba(46, 86, 255, 0.5);
+}
+
+.whyus-project-close:active {
+  transform: scale(0.92);
+}
+
+.whyus-project-close:focus-visible {
+  outline:
+    2px solid var(--cyan);
+
+  outline-offset: 5px;
+}
+
+.whyus-project-close svg {
+  display: block;
+
+  width: 28px !important;
+  height: 28px !important;
+
+  color: #ffffff !important;
+
+  stroke:
+    currentColor;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MODAL LABEL
+   ========================================================= */
+
+.whyus-project-modal-label {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-right: 80px;
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.whyus-project-modal-label span {
+  color:
+    rgba(255, 255, 255, 0.55);
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+}
+
+.whyus-project-modal-label strong {
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 0.02em;
+}
+
+
+/* =========================================================
+   MODAL IMAGE
+   ========================================================= */
+
+.whyus-project-modal-image {
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+
+  max-height:
+    calc(100vh - 145px);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.whyus-project-modal-image img {
+  display: block;
+
+  width: auto;
+
+  max-width: 100%;
+
+  height: auto;
+
+  max-height:
+    calc(100vh - 145px);
+
+  object-fit: contain;
+
+  box-shadow:
+    0 25px 80px
+      rgba(0, 0, 0, 0.5);
+
+  animation:
+    whyusModalImageIn
+    0.4s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    )
+    forwards;
+}
+
+
+/* =========================================================
+   MODAL ANIMATIONS
+   ========================================================= */
+
+@keyframes whyusModalFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes whyusModalImageIn {
+  from {
+    opacity: 0;
+
+    transform:
+      scale(0.96)
+      translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      scale(1)
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   DIFFERENCE
+   ========================================================= */
+
+.whyus-difference {
+  display: grid;
+
+  grid-template-columns:
+    90px 1fr;
+
+  gap: 50px;
+
+  padding: 100px 0;
+
+  border-top:
+    1px solid var(--card-border);
+}
+
+.whyus-difference-content {
+  max-width: 880px;
+}
+
+.whyus-difference-content h2 {
+  margin: 0;
+
+  color: var(--blue-dark);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size:
+    clamp(38px, 4.8vw, 62px);
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -0.055em;
+}
+
+.whyus-difference-content h2 span {
+  display: inline-block;
+
+  background:
+    linear-gradient(
+      100deg,
+      var(--blue),
+      var(--cyan),
+      var(--blue-bright),
+      var(--cyan)
+    );
+
+  background-size: 220% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation:
+    whyusHeadingGradient
+    6s linear infinite;
+}
+
+.whyus-copy {
+  max-width: 630px;
+
+  margin-top: 38px;
+}
+
+.whyus-copy p {
+  margin: 0 0 20px;
+
+  color: var(--muted);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   FORMULA
+   ========================================================= */
+
+.whyus-formula {
+  margin-top: 5px;
+
+  padding: 32px 42px 38px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--blue-dark),
+      var(--blue)
+    );
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+.whyus-formula-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 22px;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.16);
+
+  color:
+    rgba(255, 255, 255, 0.5);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+.whyus-formula-item {
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.13);
+}
+
+.whyus-formula-item:last-child {
+  border-bottom: none;
+}
+
+.whyus-formula-line {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 62px;
+
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.whyus-formula-line span {
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  letter-spacing: -0.035em;
+
+  transition:
+    transform 0.4s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+    color 0.3s ease;
+}
+
+.whyus-formula-line b {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color:
+    rgba(255, 255, 255, 0.55);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 18px;
+  font-weight: 400;
+
+  transition:
+    color 0.3s ease,
+    transform 0.4s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+}
+
+.whyus-formula-line:hover span {
+  transform: translateX(6px);
+}
+
+.whyus-formula-line:hover b {
+  color: #ffffff;
+}
+
+.whyus-formula-description {
+  display: grid;
+
+  grid-template-rows: 0fr;
+
+  opacity: 0;
+
+  transition:
+    grid-template-rows 0.5s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+    opacity 0.35s ease;
+}
+
+.whyus-formula-description p {
+  min-height: 0;
+
+  overflow: hidden;
+
+  max-width: 600px;
+
+  margin: 0;
+  padding: 0;
+
+  color:
+    rgba(255, 255, 255, 0.62);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+  font-weight: 400;
+
+  line-height: 1.8;
+}
+
+.whyus-formula-item.is-open
+  .whyus-formula-description {
+  grid-template-rows: 1fr;
+
+  opacity: 1;
+}
+
+.whyus-formula-item.is-open
+  .whyus-formula-description p {
+  padding-bottom: 20px;
+}
+
+.whyus-formula-item.is-open
+  .whyus-formula-line b {
+  color: #ffffff;
+
+  transform: rotate(180deg);
+}
+
+.whyus-formula-result {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-top: 15px;
+
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* =========================================================
+   FINAL
+   ========================================================= */
+
+.whyus-final {
+  display: grid;
+
+  grid-template-columns:
+    90px 1fr;
+
+  gap: 50px;
+
+  padding: 105px 0 90px;
+}
+
+.whyus-final-number {
+  color: var(--blue);
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.whyus-final-content {
+  max-width: 880px;
+}
+
+.whyus-final-content h2 {
+  margin: 0;
+
+  color: var(--blue-dark);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size:
+    clamp(38px, 4.8vw, 62px);
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -0.055em;
+}
+
+.whyus-final-content h2 span {
+  display: inline-block;
+
+  background:
+    linear-gradient(
+      100deg,
+      var(--blue),
+      var(--cyan),
+      var(--blue-bright),
+      var(--cyan)
+    );
+
+  background-size: 220% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation:
+    whyusHeadingGradient
+    6s linear infinite;
+}
+
+.whyus-final-content p {
+  max-width: 480px;
+
+  margin: 28px 0 0;
+
+  color: var(--muted);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   END
+   ========================================================= */
+
+.whyus-end {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-top: 22px;
+
+  border-top:
+    1px solid var(--card-border);
+}
+
+.whyus-end span {
+  color: var(--muted-2);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 7px;
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+.whyus-reveal {
+  opacity: 0;
+
+  transform: translateY(35px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+}
+
+.whyus-reveal.is-visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.whyus-delay-1 {
+  transition-delay: 0.08s;
+}
+
+.whyus-delay-2 {
+  transition-delay: 0.16s;
+}
+
+.whyus-delay-3 {
+  transition-delay: 0.24s;
+}
+
+.whyus-delay-4 {
+  transition-delay: 0.32s;
+}
+
+.whyus-delay-5 {
+  transition-delay: 0.4s;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+  .whyus-container {
+    width:
+      min(
+        calc(100% - 32px),
+        1180px
+      );
+
+    padding-top: 75px;
+  }
+
+  .whyus-hero h1 {
+    font-size:
+      clamp(44px, 7vw, 64px);
+  }
+
+  .whyus-repetition,
+  .whyus-difference,
+  .whyus-final {
+    grid-template-columns:
+      65px 1fr;
+
+    gap: 30px;
+
+    padding: 85px 0;
+  }
+
+  .whyus-formula {
+    padding: 32px 30px;
+  }
+
+  .whyus-list-item {
+    grid-template-columns:
+      40px 72px 1fr auto;
+
+    gap: 14px;
+  }
+
+  .whyus-list-image {
+    width: 72px;
+    height: 52px;
+  }
+
+
+  /* TABLET MODAL */
+
+  .whyus-project-modal {
+    padding: 28px;
+  }
+
+  .whyus-project-modal-inner {
+    width:
+      calc(100vw - 56px);
+
+    max-height:
+      calc(100vh - 56px);
+  }
+
+  .whyus-project-close {
+    top: 18px !important;
+    right: 20px !important;
+
+    width: 50px !important;
+    height: 50px !important;
+
+    min-width: 50px !important;
+    min-height: 50px !important;
+  }
+
+  .whyus-project-modal-image {
+    max-height:
+      calc(100vh - 130px);
+  }
+
+  .whyus-project-modal-image img {
+    max-height:
+      calc(100vh - 130px);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .whyus-container {
+    width: calc(100% - 28px);
+
+    padding: 58px 0 45px;
+  }
+
+  .whyus-hero {
+    padding-bottom: 48px;
+  }
+
+  .whyus-topline {
+    margin-bottom: 24px;
+  }
+
+  .whyus-label,
+  .whyus-index {
+    font-size: 7px;
+  }
+
+  .whyus-label::before {
+    width: 25px;
+  }
+
+  .whyus-hero h1 {
+    width: 100%;
+
+    font-size:
+      clamp(36px, 9.5vw, 50px);
+
+    line-height: 1.02;
+
+    letter-spacing: -0.045em;
+  }
+
+  .whyus-hero-bottom {
+    display: block;
+
+    margin-top: 30px;
+  }
+
+  .whyus-hero-bottom p {
+    max-width: 320px;
+
+    font-size: 10.5px;
+  }
+
+  .whyus-hero-arrow {
+    display: none;
+  }
+
+  .whyus-repetition,
+  .whyus-difference,
+  .whyus-final {
+    grid-template-columns:
+      35px 1fr;
+
+    gap: 15px;
+
+    padding: 65px 0;
+  }
+
+  .whyus-section-label {
+    margin-bottom: 13px;
+
+    font-size: 7px;
+  }
+
+  .whyus-intro {
+    margin-bottom: 30px;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+  .whyus-list-item {
+    grid-template-columns:
+      24px 58px 1fr auto;
+
+    gap: 9px;
+
+    min-height: 70px;
+  }
+
+  .whyus-list-item strong {
+    font-size: 10px;
+  }
+
+  .whyus-list-number {
+    font-size: 6.5px;
+  }
+
+  .whyus-list-image {
+    width: 58px;
+    height: 44px;
+  }
+
+  .whyus-list-item svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .whyus-question {
+    margin-top: 25px;
+
+    font-size: 12px;
+  }
+
+
+  /* MOBILE MODAL */
+
+  .whyus-project-modal {
+    padding: 18px;
+  }
+
+  .whyus-project-modal-inner {
+    width:
+      calc(100vw - 36px);
+
+    max-height:
+      calc(100vh - 36px);
+
+    gap: 13px;
+  }
+
+  .whyus-project-close {
+    top: 12px !important;
+    right: 12px !important;
+
+    width: 46px !important;
+    height: 46px !important;
+
+    min-width: 46px !important;
+    min-height: 46px !important;
+  }
+
+  .whyus-project-close svg {
+    width: 23px !important;
+    height: 23px !important;
+  }
+
+  .whyus-project-modal-label {
+    padding-right: 58px;
+  }
+
+  .whyus-project-modal-label span {
+    font-size: 6px;
+  }
+
+  .whyus-project-modal-label strong {
+    font-size: 10px;
+  }
+
+  .whyus-project-modal-image {
+    width: 100%;
+
+    max-height:
+      calc(100vh - 110px);
+  }
+
+  .whyus-project-modal-image img {
+    width: auto;
+
+    max-width: 100%;
+
+    max-height:
+      calc(100vh - 110px);
+  }
+
+
+  /* DIFFERENCE */
+
+  .whyus-difference-content h2,
+  .whyus-final-content h2 {
+    font-size:
+      clamp(36px, 9vw, 50px);
+
+    line-height: 1.02;
+  }
+
+  .whyus-copy {
+    margin-top: 27px;
+  }
+
+  .whyus-copy p {
+    margin-bottom: 17px;
+
+    font-size: 10px;
+
+    line-height: 1.85;
+  }
+
+
+  /* FORMULA */
+
+  .whyus-formula {
+    margin-top: 0;
+
+    padding: 27px 20px 29px;
+  }
+
+  .whyus-formula-top {
+    font-size: 6.5px;
+  }
+
+  .whyus-formula-line {
+    min-height: 50px;
+  }
+
+  .whyus-formula-line span {
+    font-size: 19px;
+  }
+
+  .whyus-formula-line b {
+    width: 24px;
+    height: 24px;
+
+    font-size: 15px;
+  }
+
+  .whyus-formula-description p {
+    font-size: 9px;
+
+    line-height: 1.8;
+  }
+
+  .whyus-formula-item.is-open
+    .whyus-formula-description p {
+    padding-bottom: 17px;
+  }
+
+  .whyus-formula-result {
+    padding-top: 12px;
+
+    font-size: 7px;
+  }
+
+
+  /* FINAL */
+
+  .whyus-final-content p {
+    margin-top: 22px;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+  }
+
+
+  /* END */
+
+  .whyus-end {
+    flex-wrap: wrap;
+
+    padding-top: 19px;
+  }
+
+  .whyus-end span {
+    font-size: 6px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .whyus-container {
+    width: calc(100% - 24px);
+  }
+
+  .whyus-hero h1 {
+    font-size: 34px;
+  }
+
+  .whyus-difference-content h2,
+  .whyus-final-content h2 {
+    font-size: 28px;
+  }
+
+  .whyus-list-item {
+    grid-template-columns:
+      20px 52px 1fr auto;
+
+    gap: 7px;
+  }
+
+  .whyus-list-image {
+    width: 52px;
+    height: 40px;
+  }
+
+  .whyus-list-item strong {
+    font-size: 9px;
+  }
+
+  .whyus-formula-line span {
+    font-size: 18px;
+  }
+
+  .whyus-project-close {
+    top: 10px !important;
+    right: 10px !important;
+
+    width: 43px !important;
+    height: 43px !important;
+
+    min-width: 43px !important;
+    min-height: 43px !important;
+  }
+
+  .whyus-project-close svg {
+    width: 21px !important;
+    height: 21px !important;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .whyus-reveal {
+    opacity: 1;
+
+    transform: none;
+
+    transition: none;
+  }
+
+  .whyus-list-item,
+  .whyus-list-item svg,
+  .whyus-list-image img,
+  .whyus-formula-line span,
+  .whyus-formula-line b,
+  .whyus-formula-description,
+  .whyus-hero h1 span,
+  .whyus-difference-content h2 span,
+  .whyus-final-content h2 span,
+  .whyus-project-modal,
+  .whyus-project-modal-image img {
+    transition: none;
+
+    animation: none;
+  }
+}

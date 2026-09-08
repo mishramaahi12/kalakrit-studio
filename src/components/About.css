@@ -1,0 +1,930 @@
+/* =========================================================
+   KALAKRIT STUDIO — ABOUT
+========================================================= */
+
+.about-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 120px 0 100px;
+
+  background: var(--bg);
+
+  overflow: hidden;
+}
+
+.about-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, calc(100% - 40px));
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOWS
+========================================================= */
+
+.about-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(90px);
+
+  opacity: 0.65;
+}
+
+.about-glow-one {
+  width: 520px;
+  height: 520px;
+
+  top: -220px;
+  right: -180px;
+
+  background: rgba(46, 86, 255, 0.11);
+}
+
+.about-glow-two {
+  width: 420px;
+  height: 420px;
+
+  bottom: 15%;
+  left: -220px;
+
+  background: rgba(0, 194, 203, 0.09);
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.about-top {
+  display: flex;
+
+  justify-content: flex-end;
+
+  padding-bottom: 80px;
+
+  border-bottom: 1px solid var(--card-border);
+}
+
+.about-intro {
+  width: 78%;
+}
+
+.about-kicker {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+
+  color: var(--blue);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+.about-kicker-line {
+  width: 34px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    var(--blue),
+    var(--cyan)
+  );
+}
+
+.about-heading-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 35px;
+
+  color: var(--muted-2);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 7px;
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+}
+
+.about-intro h1 {
+  max-width: 920px;
+
+  margin: 0;
+
+  color: var(--blue-dark);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(48px, 6vw, 76px);
+
+  font-weight: 700;
+
+  line-height: 0.99;
+
+  letter-spacing: -0.06em;
+}
+
+.about-intro h1 span {
+  background: linear-gradient(
+    100deg,
+    var(--blue),
+    var(--cyan),
+    var(--blue-bright),
+    var(--cyan)
+  );
+
+  background-size: 220% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation:
+    aboutHeadingGradient 6s linear infinite;
+}
+
+@keyframes aboutHeadingGradient {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 220% center;
+  }
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.about-content {
+  display: flex;
+
+  justify-content: flex-start;
+
+  padding-top: 80px;
+}
+
+.about-copy {
+  width: 100%;
+  max-width: 900px;
+}
+
+
+/* =========================================================
+   BODY TEXT
+========================================================= */
+
+.about-copy p {
+  margin: 0 0 30px;
+
+  color: var(--muted);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  line-height: 1.9;
+}
+
+.about-copy .about-lead {
+  max-width: 850px;
+
+  margin-bottom: 38px;
+
+  color: var(--text);
+
+  font-size: 19px;
+
+  font-weight: 500;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   FINAL LINE
+========================================================= */
+
+.about-copy .about-final-line {
+  margin-top: 52px;
+
+  margin-bottom: 38px;
+
+  color: var(--text);
+
+  font-size: 21px;
+
+  font-weight: 600;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   CTA LINK
+========================================================= */
+
+.about-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding-bottom: 10px;
+
+  color: var(--blue);
+
+  border-bottom: 1px solid var(--blue);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+
+  text-decoration: none;
+
+  transition:
+    gap 0.35s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.about-link:hover {
+  gap: 22px;
+
+  color: var(--cyan);
+
+  border-color: var(--cyan);
+}
+
+
+/* =========================================================
+   CTA ARROW
+========================================================= */
+
+.about-link-arrow {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    var(--blue),
+    var(--cyan)
+  );
+
+  border-radius: 50%;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.3s ease;
+}
+
+.about-link:hover .about-link-arrow {
+  transform: translate(3px, -3px);
+
+  box-shadow:
+    0 6px 16px rgba(46, 86, 255, 0.22);
+}
+
+
+/* =========================================================
+   BOTTOM STATEMENT
+========================================================= */
+
+.about-statement {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 22px;
+
+  margin-top: 135px;
+
+  padding-top: 42px;
+
+  border-top: 1px solid var(--card-border);
+
+  color: var(--text);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(18px, 2.2vw, 29px);
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+}
+
+.statement-symbol {
+  color: var(--cyan);
+
+  font-size: 20px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.about-reveal {
+  opacity: 0;
+
+  transform: translateY(45px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-reveal.is-visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   STAGGER
+========================================================= */
+
+.about-delay-1 {
+  transition-delay: 0.08s;
+}
+
+.about-delay-2 {
+  transition-delay: 0.16s;
+}
+
+.about-delay-3 {
+  transition-delay: 0.24s;
+}
+
+.about-delay-4 {
+  transition-delay: 0.32s;
+}
+
+.about-delay-5 {
+  transition-delay: 0.40s;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .about-section {
+    padding: 100px 0 85px;
+  }
+
+  .about-container {
+    width: min(
+      calc(100% - 32px),
+      700px
+    );
+  }
+
+  .about-top {
+    display: block;
+
+    padding-bottom: 60px;
+  }
+
+  .about-intro {
+    width: 100%;
+  }
+
+  .about-heading-meta {
+    margin-bottom: 30px;
+  }
+
+  .about-intro h1 {
+    font-size: clamp(
+      44px,
+      7vw,
+      64px
+    );
+  }
+
+  .about-content {
+    padding-top: 60px;
+  }
+
+  .about-copy {
+    max-width: 760px;
+  }
+
+  .about-copy p {
+    font-size: 14px;
+
+    line-height: 1.85;
+  }
+
+  .about-copy .about-lead {
+    font-size: 18px;
+  }
+
+  .about-statement {
+    margin-top: 90px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .about-section {
+    padding: 80px 0 65px;
+  }
+
+  .about-container {
+    width: calc(100% - 28px);
+  }
+
+  .about-top {
+    padding-bottom: 45px;
+  }
+
+  .about-kicker {
+    margin-bottom: 20px;
+
+    font-size: 7px;
+  }
+
+  .about-kicker-line {
+    width: 26px;
+  }
+
+  .about-heading-meta {
+    margin-bottom: 25px;
+
+    font-size: 6px;
+  }
+
+  .about-intro h1 {
+    font-size: clamp(
+      36px,
+      9.5vw,
+      50px
+    );
+
+    line-height: 1;
+
+    letter-spacing: -0.05em;
+  }
+
+  .about-content {
+    padding-top: 45px;
+  }
+
+  .about-copy p {
+    margin-bottom: 22px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+  }
+
+  .about-copy .about-lead {
+    margin-bottom: 28px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+  }
+
+  .about-copy .about-final-line {
+    margin-top: 35px;
+
+    margin-bottom: 30px;
+
+    font-size: 17px;
+  }
+
+  .about-link {
+    gap: 11px;
+
+    font-size: 8px;
+  }
+
+  .about-link-arrow {
+    width: 23px;
+    height: 23px;
+
+    font-size: 15px;
+  }
+
+  .about-statement {
+    margin-top: 70px;
+
+    padding-top: 30px;
+
+    gap: 10px;
+
+    font-size: 14px;
+
+    letter-spacing: 0.05em;
+  }
+
+  .statement-symbol {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .about-intro h1 {
+    font-size: 34px;
+  }
+
+  .about-statement {
+    gap: 7px;
+
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-reveal {
+    opacity: 1;
+
+    transform: none;
+
+    transition: none;
+  }
+
+  .about-intro h1 span {
+    animation: none;
+  }
+
+  .about-link,
+  .about-link-arrow {
+    transition: none;
+  }
+}
+
+/* =========================================
+   ABOUT — CREATE SOMETHING DIFFERENT CTA
+========================================= */
+
+.about-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  margin-top: 28px;
+  padding: 14px 22px;
+
+  color: #ffffff !important;
+  background: var(--blue);
+
+  border: 1px solid var(--blue);
+  border-radius: 999px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.09em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 24px rgba(46, 86, 255, 0.12);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.about-cta:hover {
+  color: #ffffff !important;
+  background: var(--blue-bright);
+  border-color: var(--blue-bright);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(46, 86, 255, 0.18);
+}
+
+.about-cta svg {
+  color: #ffffff;
+  width: 15px;
+  height: 15px;
+
+  transition: transform 0.25s ease;
+}
+
+.about-cta:hover svg {
+  transform: translate(3px, -3px);
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .about-cta {
+    width: 100%;
+    min-height: 48px;
+
+    margin-top: 24px;
+    padding: 0 18px;
+
+    justify-content: center;
+
+    font-size: 8px;
+  }
+}
+
+/* =========================================
+   ABOUT CTA — FORCE STYLE
+========================================= */
+
+.about-content .about-cta,
+.about-copy .about-cta,
+button.about-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+
+  width: auto !important;
+  min-width: 250px !important;
+  min-height: 48px !important;
+
+  padding: 0 22px !important;
+  margin-top: 28px !important;
+
+  background: var(--blue) !important;
+  color: #ffffff !important;
+
+  border: 1px solid var(--blue) !important;
+  border-radius: 999px !important;
+
+  font-family: "Poppins", sans-serif !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+
+  letter-spacing: 0.08em !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+
+  text-decoration: none !important;
+  cursor: pointer !important;
+
+  box-shadow: 0 10px 28px rgba(46, 86, 255, 0.14) !important;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease !important;
+}
+
+.about-content .about-cta:hover,
+.about-copy .about-cta:hover,
+button.about-cta:hover {
+  background: var(--blue-bright) !important;
+  border-color: var(--blue-bright) !important;
+  color: #ffffff !important;
+
+  transform: translateY(-2px) !important;
+
+  box-shadow: 0 14px 32px rgba(46, 86, 255, 0.2) !important;
+}
+
+.about-content .about-cta svg,
+.about-copy .about-cta svg,
+button.about-cta svg {
+  width: 15px !important;
+  height: 15px !important;
+
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+
+  flex-shrink: 0 !important;
+
+  transition: transform 0.25s ease !important;
+}
+
+.about-content .about-cta:hover svg,
+.about-copy .about-cta:hover svg,
+button.about-cta:hover svg {
+  transform: translate(3px, -3px) !important;
+}
+
+@media (max-width: 700px) {
+  .about-content .about-cta,
+  .about-copy .about-cta,
+  button.about-cta {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 50px !important;
+
+    margin-top: 24px !important;
+  }
+}
+
+/* =========================================
+   ABOUT — CREATE SOMETHING DIFFERENT BOX
+========================================= */
+
+.about-copy .about-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 14px !important;
+
+  width: auto !important;
+  min-width: 285px !important;
+  min-height: 50px !important;
+
+  padding: 0 10px 0 22px !important;
+  margin-top: 8px !important;
+
+  color: #ffffff !important;
+  background: var(--blue) !important;
+
+  border: 1px solid var(--blue) !important;
+  border-radius: 999px !important;
+
+  font-family: "Poppins", sans-serif !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+
+  letter-spacing: 0.08em !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+
+  cursor: pointer !important;
+
+  box-shadow:
+    0 10px 28px rgba(46, 86, 255, 0.14) !important;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease !important;
+}
+
+/* HOVER */
+
+.about-copy .about-link:hover {
+  gap: 14px !important;
+
+  color: #ffffff !important;
+  background: var(--blue-bright) !important;
+
+  border-color: var(--blue-bright) !important;
+
+  transform: translateY(-2px) !important;
+
+  box-shadow:
+    0 14px 34px rgba(46, 86, 255, 0.20) !important;
+}
+
+/* REMOVE OLD UNDERLINE */
+
+.about-copy .about-link::after {
+  display: none !important;
+}
+
+/* ARROW CIRCLE */
+
+.about-copy .about-link .about-link-arrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 32px !important;
+  height: 32px !important;
+
+  flex: 0 0 32px !important;
+
+  padding: 0 !important;
+
+  color: #ffffff !important;
+  background: linear-gradient(
+    135deg,
+    var(--blue-bright),
+    var(--cyan)
+  ) !important;
+
+  border: none !important;
+  border-radius: 50% !important;
+
+  font-family: "Poppins", sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease !important;
+}
+
+.about-copy .about-link:hover .about-link-arrow {
+  transform: translate(3px, -3px) !important;
+
+  box-shadow:
+    0 7px 18px rgba(46, 86, 255, 0.25) !important;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .about-copy .about-link {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 50px !important;
+
+    padding: 0 9px 0 16px !important;
+
+    font-size: 8px !important;
+    letter-spacing: 0.06em !important;
+
+    gap: 10px !important;
+  }
+
+  .about-copy .about-link .about-link-arrow {
+    width: 30px !important;
+    height: 30px !important;
+
+    flex: 0 0 30px !important;
+
+    font-size: 16px !important;
+  }
+}
